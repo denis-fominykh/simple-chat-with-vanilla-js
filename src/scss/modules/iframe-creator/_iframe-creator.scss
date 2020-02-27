@@ -12,20 +12,20 @@
 
   &__user-creator {
     &_color {
-			cursor: pointer;
-			font-size: 14px;
-			text-decoration: none;
-			padding: 1px 20px;
-			color: #ffffff;
-			background-color: #282c2f;
-			border-radius: 5px;
-			border: 1px solid #ffffff;
-		}
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      padding: 1px 20px;
+      color: #ffffff;
+      background-color: #282c2f;
+      border-radius: 5px;
+      border: 1px solid #ffffff;
+    }
 
-		&_color:hover {
-			color: #282c2f;
-			background-color: #ffffff;
-			border: 1px solid #282c2f;
+    &_color:hover {
+      color: #282c2f;
+      background-color: #ffffff;
+      border: 1px solid #282c2f;
     }
 
     &:active {
