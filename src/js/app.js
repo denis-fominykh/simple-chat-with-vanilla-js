@@ -11,3 +11,7 @@ document
       UI.addIFrameToChat(new IFrame(name));
     }
   });
+
+document.querySelector('.iframe-chat').addEventListener('click', event => {
+  UI.deleteIFrame(event.target);
+});

@@ -18,6 +18,7 @@ export class UI {
     iframeForm.setAttribute('class', 'iframe iframe_appearance');
 
     iframeForm.innerHTML = `
+      <button class="iframe__delete-btn iframe__delete-btn_color">x</button>
       <h1 class="iframe__name">${iframe.name}</h1>
       <input class="iframe__own-message">
       <button class="iframe__send-btn">send</button>
@@ -25,5 +26,11 @@ export class UI {
     `;
 
     chat.appendChild(iframeForm);
+  }
+
+  static deleteIFrame(element) {
+    if (element.classList.contains('iframe__delete-btn')) {
+      element.parentElement.remove();
+    }
   }
 }

@@ -5,4 +5,16 @@
     margin: 1px;
     border: 1px solid #000000;
   }
+
+  &__delete-btn {
+    &_color {
+      border: 1px solid #000000;
+      background-color: red;
+      color: white;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 }
