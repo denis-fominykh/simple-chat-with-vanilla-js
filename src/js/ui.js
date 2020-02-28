@@ -1,15 +1,10 @@
 export class UI {
-  static displayIFrame() {
-    const iframes = [
-      {
-        name: 'John Doe',
-      },
-      {
-        name: 'Jane Doe',
-      },
-    ];
+  static displayIFrame(mediator) {
+    const iframes = [...mediator];
 
-    iframes.forEach(iframe => UI.addIFrameToChat(iframe));
+    iframes.forEach(iframe => {
+      UI.addIFrameToChat(iframe);
+    });
   }
 
   static addIFrameToChat(iframe) {
