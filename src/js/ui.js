@@ -1,12 +1,4 @@
 export class UI {
-  static displayIFrame(mediator) {
-    const iframes = [...mediator];
-
-    iframes.forEach(iframe => {
-      UI.addIFrameToChat(iframe);
-    });
-  }
-
   static addIFrameToChat(iframe) {
     const chat = document.querySelector('.iframe-chat');
     const iframeForm = document.createElement('div');
@@ -24,8 +16,6 @@ export class UI {
   }
 
   static deleteIFrame(element) {
-    if (element.classList.contains('iframe__delete-btn')) {
-      element.parentElement.remove();
-    }
+    element.parentElement.remove();
   }
 }
