@@ -3,6 +3,14 @@ export class Mediator {
     this.iframes = [];
   }
 
+  send(message, from) {
+    this.iframes.forEach(item => {
+      if (item.name === from) {
+        item.send(message);
+      }
+    });
+  }
+
   addIFrame(iframe) {
     this.iframes.push(iframe);
   }
