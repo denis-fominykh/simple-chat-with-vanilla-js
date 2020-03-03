@@ -19,7 +19,14 @@ export class Mediator {
   }
 
   addIFrame(iframe) {
-    this.iframes.push(iframe);
+    if (!this.iframes.find(item => item.name === iframe.name)) {
+      this.iframes.push(iframe);
+      iframe.mediator = this;
+      UI.addIFrameToChat(iframe);
+      this.send('I\'ve joined the conversation', iframe.name);
+    } else {
+      alert('Choose another name');
+    }
   }
 
   getIFrames() {
