@@ -15,7 +15,7 @@ export class Mediator {
 
   addMessage(message, from) {
     UI.addMessage(message, from);
-    UI.clearChat();
+    UI.cleanChat();
   }
 
   addIFrame(iframe) {

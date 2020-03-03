@@ -23,7 +23,7 @@ export class UI {
     });
   }
 
-  static clearChat() {
+  static cleanChat() {
     const chatbox = document.querySelectorAll('.iframe__all-messages');
     chatbox.forEach(element => {
       if (element.offsetHeight > 156) {
