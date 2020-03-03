@@ -23,6 +23,15 @@ export class UI {
     });
   }
 
+  static clearChat() {
+    const chatbox = document.querySelectorAll('.iframe__all-messages');
+    chatbox.forEach(element => {
+      if (element.offsetHeight > 156) {
+        element.removeChild(element.children[0]);
+      }
+    });
+  }
+
   static deleteIFrame(element) {
     element.parentElement.remove();
   }
