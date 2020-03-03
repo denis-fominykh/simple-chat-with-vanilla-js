@@ -1,3 +1,5 @@
+import { UI } from './ui';
+
 export class Mediator {
   constructor() {
     this.iframes = [];
@@ -9,6 +11,11 @@ export class Mediator {
         item.send(message);
       }
     });
+  }
+
+  addMessage(message, from) {
+    UI.addMessage(message, from);
+    UI.clearChat();
   }
 
   addIFrame(iframe) {
