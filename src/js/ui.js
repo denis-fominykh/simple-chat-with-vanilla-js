@@ -15,6 +15,14 @@ export class UI {
     chat.appendChild(iframeForm);
   }
 
+  static addMessage(message, from) {
+    const chatbox = document.querySelectorAll('.iframe__all-messages');
+
+    chatbox.forEach(element => {
+      element.innerHTML += `<p>[${from.name}]: ${message}</p>`;
+    });
+  }
+
   static deleteIFrame(element) {
     element.parentElement.remove();
   }
