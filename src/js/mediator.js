@@ -29,7 +29,11 @@ export class Mediator {
     }
   }
 
-  getIFrames() {
-    return this.iframes;
+  deleteIFrame(element) {
+    const name = element.nextSibling.nextSibling.textContent;
+    const deleteItem = this.iframes.find(item => item.name === name);
+    this.send('I\'ve left this conversation', name);
+    this.iframes.splice(this.iframes.indexOf(deleteItem), 1);
+    UI.deleteIFrame(element);
   }
 }
